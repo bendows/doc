@@ -1,0 +1,69 @@
+# http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt
+[filter "tabs2spaces"]
+    clean = expand --tabs=4 --initial
+    smudge = unexpand --tabs=4 --first-only
+[diff]
+        color = always
+	tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[color]
+        diff = auto
+        ui = true
+        status = auto
+        branch = auto
+[push]
+        default = current
+[format]
+#       pretty = oneline
+[alias]
+        gone = "fsck --lost-found"
+        co = checkout
+        l = "log --date=iso --graph --format='%ad %C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset'"
+        ll = "log --date=iso --graph --format='%ad %C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset'"
+        #ll = "log --date=iso --graph --format='%C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset %ad%aN'"
+        ld = "log --graph --format='%C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset' --simplify-by-decoration"
+        lf = "log --graph --stat --format='%C(cyan dim) %p %Cred %h %Cgreen %ci %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset'"
+        la = "log --graph --all --format='%C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset'"
+        lad = "log --graph --all --format='%C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset' --simplify-by-decoration"
+        laf = "log --graph --stat --all --format='%C(cyan dim) %p %Cred %h %C(white dim) %s %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d%Creset'"
+	br = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+        s = log --stat --graph --format='\n\n%C(cyan dim) %p %Cred %h %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d\n\n%Creset %C(white dim)%B' -U1
+        si = log --stat --graph --format='\n\n%C(cyan dim) %p %Cred %h %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d\n\n%Creset %C(white dim)%B' -U1 --word-diff
+        sat = log --date=local --tags --show-notes --stat --graph --format='\n\n%C(cyan dim) %p %Cred %h %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d\n\n%Creset %C(white dim)%B' --all -U1
+        st = log --date=iso --tags --show-notes --stat --graph --format='\n\n%C(cyan dim) %p %Cred %h %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d\n\n%Creset %C(white dim)%B' -U1
+        sa = log --tags --show-notes --stat --graph --format='\n\n%C(cyan dim) %p %Cred %h %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d\n\n%Creset %C(white dim)%B' --all -U1
+        sai = log --stat --graph --format='\n\n%C(cyan dim) %p %Cred %h %Cgreen(%cr)%C(cyan dim) <%an>%C(bold yellow)%d\n\n%Creset %C(white dim)%B' --all -U1 --word-diff
+        mergedry = "merge --no-commit --no-ff"
+        #dif = diff --ignore-space-at-eol -b -w
+        x = clean -ndX
+        #h = log --graph --pretty=format:'%p %Cred%h%Creset %s %C(green)(%aD) %Creset (%cr) %C(bold blue)<%an>%Creset %C(bold yellow)%d'
+        b = show-branch -ra
+        dif = diff --ignore-space-change --ignore-all-space --ignore-space-at-eol
+        difi = diff --ignore-space-change --ignore-all-space --ignore-space-at-eol --word-diff
+        files = ls-tree --name-only -r
+        r = "remote show origin"
+        files2 = diff-tree --no-commit-id --name-only -r
+        diffy = difftool --extcmd=\"colordiff -ydw\"
+        difb = difftool --extcmd=\"colordiff -ydw\"
+        dify = difftool --extcmd=\"colordiff --width=365 -ydw\"
+        chmod = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+[user]
+        email = ben@bendows
+	name = ben
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[apply]
+        whitespace = nowarn
+[core]
+        whitespace = cr-at-eol
+	whitespace = -trailing-space,-indent-with-non-tab,-tab-in-indent
+[difftool]
+	prompt = false
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$BASE $LOCAL $REMOTE $MERGED"
+    trustExitCode = false
