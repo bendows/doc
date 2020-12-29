@@ -8,7 +8,7 @@ git fetch origin master
 git checkout master
 git checkout master && git merge origin/master
 git push origin master
-
+git remote remove origin
 git checkout master && git merge origin/master --allow-unrelated-histories
 
 ```
