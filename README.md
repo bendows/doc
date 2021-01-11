@@ -29,3 +29,20 @@ git diff --diff-filter=M --author=John\ Do
 git checkout -
 
 ```
+# LEMP 20.04.1 LTS (Focal Fossa)
+
+```shell
+sudo apt update
+sudo apt install nginx
+sudo apt install mysql-server
+sudo apt install php-fpm php-mysql
+sudo ufw allow 'Nginx HTTP'
+sudo mysql_secure_installation
+sudo nano /etc/nginx/sites-available/example.com
+sudo ufw status
+
+```
+
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
