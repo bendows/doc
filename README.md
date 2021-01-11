@@ -40,6 +40,8 @@ sudo ufw allow 'Nginx HTTP'
 sudo mysql_secure_installation
 sudo nano /etc/nginx/sites-available/example.com
 sudo ufw status
+systemctl enable nginx
+systemctl enable php7.4-fpm.service
 
 ```
 
