@@ -26,4 +26,6 @@ git status
 
 git diff --diff-filter=M --author=John\ Do
 
+git checkout -
+
 ```
