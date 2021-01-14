@@ -28,6 +28,8 @@ git diff --diff-filter=M --author=John\ Do
 
 git checkout -
 
+git checkout --theirs -- some-file-some-where # After / resolving a merge conflict
+
 ```
 # LEMP 20.04.1 LTS (Focal Fossa)
 
