@@ -30,6 +30,8 @@ git checkout -
 
 git checkout --theirs -- some-file-some-where # After / resolving a merge conflict
 
+git clean -f #Dangerous
+
 ```
 # LEMP 20.04.1 LTS (Focal Fossa)
 
