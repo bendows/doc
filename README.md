@@ -30,7 +30,7 @@ git checkout -
 
 git checkout --theirs -- some-file-some-where # After / resolving a merge conflict
 
-git clean -f #Dangerous
+git clean -f #Dangerous - get's rid of untracked files to make the working tree clean
 
 ```
 # LEMP 20.04.1 LTS (Focal Fossa)
