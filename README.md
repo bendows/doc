@@ -19,6 +19,8 @@ git checkout master
 
 git push origin master
 
+git dif some-commit --name-status
+
 git checkout HEAD -- some/where/some/file.go
 git checkout HEAD -- .
 git reset HEAD -- some/file/some/where.txt
