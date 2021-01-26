@@ -28,6 +28,8 @@ git status
 
 git diff --diff-filter=M --author=John\ Do
 
+git show --name-status
+git show
 git checkout -
 
 git checkout --theirs -- some-file-some-where # After / resolving a merge conflict
