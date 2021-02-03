@@ -58,3 +58,6 @@ systemctl enable php7.4-fpm.service
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
+```grep
+tail -f /var/log/mysql/query.log | egrep -IEA10 'INSERT|UPDATE'
+tail -f /var/log/mysql/query.log | egrep -iIEA10 'INSERT|UPDATE'
