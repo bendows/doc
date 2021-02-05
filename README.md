@@ -39,7 +39,7 @@ git checkout --theirs -- some-file-some-where # After / resolving a merge confli
 git clean -f #Dangerous - get's rid of untracked files to make the working tree clean
 
 ```
-# Shell Commands
+## Shell Commands
 
 
 ```shell
