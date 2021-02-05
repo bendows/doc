@@ -39,6 +39,13 @@ git checkout --theirs -- some-file-some-where # After / resolving a merge confli
 git clean -f #Dangerous - get's rid of untracked files to make the working tree clean
 
 ```
+# Shell Commands
+
+
+```shell
+ssh -i "some-file.pem" user@1.2.3.4
+
+```
 # LEMP 20.04.1 LTS (Focal Fossa)
 
 ```shell
