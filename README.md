@@ -1,4 +1,4 @@
-# Git commands
+## Git commands
 
 ```shell
 mkdir git ; cd git && git init
@@ -46,7 +46,7 @@ git clean -f #Dangerous - get's rid of untracked files to make the working tree 
 ssh -i "some-file.pem" user@1.2.3.4
 
 ```
-# LEMP 20.04.1 LTS (Focal Fossa)
+## LEMP 20.04.1 LTS (Focal Fossa)
 
 ```shell
 sudo apt update
@@ -61,12 +61,12 @@ systemctl enable nginx
 systemctl enable php7.4-fpm.service
 
 ```
-# MySQL
+## MySQL
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
-# egrep
+## egrep
 
 ```shell
 tail -f /var/log/mysql/query.log | egrep -IEA10 'INSERT|UPDATE'
