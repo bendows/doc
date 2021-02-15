@@ -6,8 +6,10 @@ https://github.com/bendows/fblks/commits/master
 ```shell
 mkdir git ; cd git && git init
 git init .
+git config core.sshCommand "ssh -i /some/where/thekey -F /dev/null"
+git remote add origin git@github.com:bendows/some-repo.git
+git fetch
 
-git remote add origin git@github.com:bendows/git.git
 git remote remove origin
 
 git fetch origin master
