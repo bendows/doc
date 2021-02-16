@@ -49,6 +49,8 @@ git clean -f #Dangerous - get's rid of untracked files to make the working tree 
 ssh -i "some-file.pem" user@1.2.3.4
 //Test public and private key pair
 diff <(ssh-keygen -y -e -f "/home/somewhere/.ssh/id_rsa" ) <( ssh-keygen -y -e -f "/home/somewhere/.ssh/id_rsa.pub")
+// print out a private key's public key
+ssh-keygen -y -f id_rsa
 
 ```
 ## LEMP 20.04.1 LTS (Focal Fossa)
