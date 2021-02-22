@@ -78,4 +78,5 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 ```shell
 tail -f /var/log/mysql/query.log | egrep -IEA10 'INSERT|UPDATE'
 tail -f /var/log/mysql/query.log | egrep -iIEA10 'INSERT|UPDATE'
+egrep --color -EriI '\$dims'
 ```
