@@ -1,7 +1,3 @@
-## github.com
-
-https://github.com/bendows/fblks/commits/master
-
 ## Git commands
 ```shell
 mkdir git ; cd git && git init
