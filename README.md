@@ -32,6 +32,7 @@ git add -u   // Also remove files never committed and not in the index, nor in t
 git diff --diff-filter=M --author=John\ Do
 
 git diff --cached
+git dif --cached --name-status
 
 git show --name-status
 git show
