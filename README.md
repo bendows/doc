@@ -73,6 +73,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password
 ```
 ## egrep
 ```shell
+egrep -nriI '^[^#]*(ServerName|DocumentRoot)' /etc/apache2/sites-available/*conf
 tail -f /var/log/mysql/query.log | egrep -IEA10 'INSERT|UPDATE'
 tail -f /var/log/mysql/query.log | egrep -iIEA10 'INSERT|UPDATE'
 egrep --color -EriI '\$dims'
