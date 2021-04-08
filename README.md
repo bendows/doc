@@ -77,6 +77,8 @@ SET GLOBAL validate_password.number_count = 0;
 SET GLOBAL validate_password.special_char_count = 0;
 SET GLOBAL validate_password.check_user_name = 0;
 create user 'asdf'@'%' identified by 'asdfasdfasdf';
+GRANT ALL PRIVILEGES ON asdfasdf.* TO 'asdfasdf'@'%';
+
 flush privileges
 ```
 ## egrep
