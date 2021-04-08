@@ -8,3 +8,5 @@ sudo systemctl stop snapd && sudo systemctl disable snapd
 sudo apt --allow-remove-essential -y purge snapd
 sudo rm -rf /home/ubuntu/snap /snap /var/snap /var/lib/snapd /var/cache/snapd /usr/lib/snapd
 sudo apt -y autoremove
+systemctl stop systemd-udevd.service
+systemctl disable systemd-udevd.service
