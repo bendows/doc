@@ -21,6 +21,7 @@ git checkout master
 git push origin master
 
 git dif some-commit --name-status
+git checkout --theirs -- . && git add .
 
 git checkout HEAD -- some/where/some/file.go
 git checkout HEAD -- .
