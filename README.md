@@ -52,6 +52,8 @@ diff <(ssh-keygen -y -e -f "/home/somewhere/.ssh/id_rsa" ) <( ssh-keygen -y -e -
 // print out a private key's public key
 ssh-keygen -y -f id_rsa
 
+mkdir /media/ben/BENDISK ; mount -o ro /dev/sda1 /media/ben/BENDISK //Readonly
+
 ```
 ## LEMP 20.04.1 LTS (Focal Fossa)
 ```shell
