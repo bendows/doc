@@ -53,7 +53,8 @@ diff <(ssh-keygen -y -e -f "/home/somewhere/.ssh/id_rsa" ) <( ssh-keygen -y -e -
 ssh-keygen -y -f id_rsa
 
 mkdir /media/ben/BENDISK ; mount -o ro /dev/sda1 /media/ben/BENDISK //Readonly
-
+xargs < paragraph | tr -s '[[:blank:]]' '\n' 
+xargs -n100 < paragraph | tr -s '[[:blank:]]' '\n' // outputs a text file as one word per line, limmiting the amount of lines by 100
 ```
 ## LEMP 20.04.1 LTS (Focal Fossa)
 ```shell
