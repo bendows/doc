@@ -1,0 +1,9 @@
+#chmod 664 this file
+[Unit]
+After=network.service
+
+[Service]
+ExecStart=/home2/github.com/bendows/apps/content-manager/content-manager
+
+[Install]
+WantedBy=default.target
