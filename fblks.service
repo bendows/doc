@@ -1,9 +1,16 @@
-#chmod 664 this file
 [Unit]
 After=network.service
 
 [Service]
+WorkingDirectory=/home2/github.com/bendows/apps/content-manager
 ExecStart=/home2/github.com/bendows/apps/content-manager/content-manager
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
+# chmod 664 this file
+# then:
+# sudo systemctl daemon-reload
+# sudo systemctl enable fblks.service
+# sudo systemctl restart fblks.service
+# journalctl -fxb --no-hostname --no-full # for full log tail -f way
+# journalctl -lfu fblks.service # only fblks.service log tail -f way
