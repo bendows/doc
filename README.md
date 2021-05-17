@@ -29,7 +29,7 @@ git reset HEAD -- some/file/some/where.txt
 git status
 
 git add -u   // Also remove files never committed and not in the index, nor in the working tree
-
+git dif --cached --diff-filter=M --name-status
 git diff --diff-filter=M --author=John\ Do
 
 git diff --cached
