@@ -19,7 +19,8 @@ git checkout master && git merge origin/master --allow-unrelated-histories
 git remote show origin
 git fetch
 git checkout master
-
+git branch -M master
+git push -u origin master
 git push origin master
 
 git dif some-commit --name-status
