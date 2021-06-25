@@ -1,5 +1,7 @@
 ## Git commands
 ```shell
+# Color output # journalctl -lfu fblks.service --output cat
+
 mkdir git ; cd git && git init
 git init .
 git config core.sshCommand "ssh -i /some/where/thekey -F /dev/null"
